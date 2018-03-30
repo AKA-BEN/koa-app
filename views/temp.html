@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板{{ id }}</title>
+</head>
+<body>
+
+    <!-- header -->
+    {% include 'header.html' %}
+
+    <!-- body -->
+    <h1>模板{{ id }}列表：</h1>
+    {% for item in list %}
+    <ul>
+        <li>{{ item }}</li>
+    </ul>
+    {% endfor %}
+    <p><a href="/temp/{{id+1}}">下一页</a></p>
+
+    <!-- footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>
