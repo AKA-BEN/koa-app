@@ -7,7 +7,6 @@ const Router = require('koa-router')
 function addControllers(router, dir, prePath=''){
     const files = fs.readdirSync(dir)
     dir += '/'
-    console.log(files)
     files.forEach((f) => {
         if (f.endsWith('.js')) {
             // 文件
@@ -38,8 +37,7 @@ function addRouters (router, dir, prePath, file) {
 module.exports = function(dir){
 
     const controller_dir = path.resolve(__dirname, '../' + (dir || 'controllers')),
-          router = new Router() 
-    console.log(controller_dir)
+          router = new Router()
     addControllers(router, controller_dir)
     return router;
 
