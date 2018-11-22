@@ -1,12 +1,17 @@
+const path = require('path')
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
 const views = require('koa-views')
-const controller = require('./controller')
+const static = require('koa-static')
+const controller = require('./util/controller')
 
 const app = new Koa()
 
 // 配置模版引擎中间件
 app.use(views(__dirname + '/views',{ extension:'ejs' }))
+
+// 静态资源目录对于相对入口文件index.js的路径
+app.use(static(path.join( __dirname,  './static')))
 
 // 解析post请求的参数
 app.use(bodyParser())
