@@ -25,7 +25,7 @@ app.use(async (ctx, next) => {
     console.log(`process ${ctx.request.method} ${ctx.request.url}...`)
     ctx.body = '<h1>404 page</h1>'
     // await next()
-});
+})
 
 // 在端口3000监听:
 app.listen(config.get('server.port'))

@@ -35,7 +35,8 @@ A koa templatetemplate
 ```
 1. git clone https://github.com/AKA-BEN/koa-app.git
 2. npm install
-3. npm run dev || npm run prod
+3. npm install -g pm2
+4. npm run dev || npm run prod
 ```
 
 ## 使用注意事项
