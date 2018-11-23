@@ -27,6 +27,8 @@ A koa templatetemplate
 │  └─ controller.js   // 支持文件路由控制器生成（勿删）
 │  └─ async-db.js     // 数据库查询封装
 ├─ views              // 模板文件
+├─ nodemon.json       // nodemon开发更新配置
+├─ pm2.config.json    // pm2生产部署配置
 ├─ app.js             // 服务启动入口
 ```
 
@@ -35,7 +37,8 @@ A koa templatetemplate
 ```
 1. git clone https://github.com/AKA-BEN/koa-app.git
 2. npm install
-3. npm install -g pm2
+3. npm install -g pm2 (生产环境)
+3. npm install -g nodemon (开发环境)
 4. npm run dev || npm run prod
 ```
 

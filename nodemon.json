@@ -1,0 +1,19 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": true,
+  "events": {},
+  "watch": [
+    "./app.js",
+    "./util/**",
+    "./views/**",
+    "./config/**",
+    "./controllers/**"
+  ],
+  "env": {},
+  "ext": "js json",
+  "legacy-watch": false
+}
